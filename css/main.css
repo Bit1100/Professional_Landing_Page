@@ -428,16 +428,21 @@ section.product {
 /* About Us  */
 
 section.about {
-    padding: 3rem 0;
+    padding: 4rem 0 8rem 0;
     font-size: 1.4rem;
-    background-color: var(--white);
+    background-color: var(--secondary);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 80% 85%, 0 100%);
+}
+
+.section-heading {
+    color: var(--light);
+    margin-top: 0;
 }
 
 #about .container div img {
     width: 40rem;
     height: 40rem;
     object-fit: cover;
-    position: relative;
     transition: var(--smooth);
 }
 
@@ -447,6 +452,7 @@ section.about {
 
 #about .container .right {
     padding-right: 15rem;
+    color: var(--white);
 }
 
 #about .container .right p:first-of-type {
@@ -515,6 +521,7 @@ section.service {
     position: absolute;
     top: -35px;
     left: 40%;
+    transform: translateX(-100%);
     border: 2px solid var(--secondary);
     transform: rotate(45deg);
     background-color: var(--secondary);
@@ -835,6 +842,10 @@ footer .box {
     .nav-trigger {
         display: block;
     }
+    section.about {
+        padding: 0rem 0 8rem 0;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 85% 90%, 0 100%);
+    }
     #about .container div img {
         width: 36rem;
         height: 36rem;
@@ -882,6 +893,10 @@ footer .box {
         height: 32rem;
         right: 0rem;
     }
+    section.about {
+        padding: 0rem 0 8rem 0;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 90% 95%, 0 100%);
+    }
     #about .container .right {
         padding-right: 4rem;
     }
@@ -912,7 +927,7 @@ footer .box {
     }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 576px) {
     .nav-trigger {
         padding: 1rem 0.5rem;
     }
@@ -928,6 +943,10 @@ footer .box {
         height: 28rem;
         top: 0rem;
         right: -6rem;
+    }
+    section.about {
+        padding: 6rem 0 8rem 0;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 95% 100%, 0 100%);
     }
     #about .container .right {
         padding: 4rem;
