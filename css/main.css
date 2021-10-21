@@ -405,11 +405,12 @@ section.product {
     border: 2px solid var(--primary-dark);
     margin: 0.5rem;
     width: 12rem;
+    border: 2px solid var(--primary-dark);
 }
 
 #product .container .card .bottom .add-to-cart img {
-    width: 100%;
-    height: 100%;
+    width: 3rem;
+    height: 3rem;
     color: var(--secondary);
     background-color: var(--primary-light);
 }
@@ -737,32 +738,47 @@ footer {
     background-color: var(--secondary);
 }
 
-footer .container hr {
-    color: var(--white);
-    width: 100%;
-    font-weight: bolder;
-    margin: -2rem 0 2.5rem 0;
+footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-footer .container h3 {
+footer hr {
+    color: var(--white);
+    width: 50%;
+    font-weight: bolder;
+    margin: -2rem auto 2.5rem auto;
+}
+
+footer h3 {
     font-size: 2.6rem;
 }
 
-footer .container .btn {
+footer .btn {
     margin: 2rem 0;
 }
 
-footer .container .links div a {
+footer .about,
+footer .links,
+footer .follow,
+footer .insta {
+    min-width: 30rem;
+    max-width: 40rem;
+    margin: auto;
+}
+
+footer .links div a {
     color: var(--white);
     text-decoration: none;
     margin: 0.4rem 0;
 }
 
-footer .container .links div a:hover {
+footer .links div a:hover {
     text-decoration: underline;
 }
 
-footer .container .follow div img {
+footer .follow div img {
     width: 3rem;
     height: 3rem;
     object-fit: cover;
@@ -771,23 +787,23 @@ footer .container .follow div img {
     background-color: var(--white);
 }
 
-footer .container .insta div {
+footer .insta div {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
 }
 
-footer .container .insta img {
+footer .insta img {
     width: 5rem;
     height: 5rem;
     object-fit: cover;
     margin: 1rem 0.5rem;
 }
 
-footer .container .box {
+footer .box {
     flex: 1;
-    margin-right: 4rem;
+    margin: 1rem auto;
     text-align: center;
 }
 
@@ -890,9 +906,6 @@ footer .container .box {
         align-items: center;
         flex-direction: column;
     }
-    .contact .map {
-        min-height: 50rem;
-    }
     #product .container {
         margin: 4rem auto;
         margin-left: 4rem;
@@ -958,5 +971,8 @@ footer .container .box {
     }
     #product .container {
         margin-left: 3rem;
+    }
+    footer {
+        justify-content: unset;
     }
 }
