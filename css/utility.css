@@ -1,0 +1,192 @@
+/* CSS Resets */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Colors */
+
+:root {
+    font-size: 10px;
+    --primary: #32cd32;
+    --secondary: #151e12;
+    --ternary: #f0fdec;
+    --primary-light: #90ee90;
+    --primary-dark: #4cbb17;
+    --pure: #fefefe;
+    --white: #ffffff;
+    --light: #f0f0f0;
+    --danger: #fe4545;
+    --tetra: #daa520;
+    --footer: #20361c;
+    --smooth: all 0.3s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Fonts */
+
+@font-face {
+    font-family: "RBaloo";
+    src: url(../fonts/BalooBhai2-Regular.ttf);
+}
+
+@font-face {
+    font-family: "BBaloo2";
+    src: url(../fonts/BalooBhai2-Bold.ttf);
+}
+
+@font-face {
+    font-family: "MBaloo2";
+    src: url(../fonts/BalooBhai2-Medium.ttf);
+}
+
+@font-face {
+    font-family: "RRaleway";
+    src: url(../fonts/Raleway-Regular.ttf);
+}
+
+@font-face {
+    font-family: "MRaleway";
+    src: url(../fonts/Raleway-Medium.ttf);
+}
+
+@font-face {
+    font-family: "BRaleway";
+    src: url(../fonts/Raleway-Bold.ttf);
+}
+
+@font-face {
+    font-family: "BOpenSans";
+    src: url(../fonts/OpenSans-Bold.ttf);
+}
+
+@font-face {
+    font-family: "IOpenSans";
+    src: url(../fonts/OpenSans-Italic.ttf);
+}
+
+@font-face {
+    font-family: "BSansita";
+    src: url(../fonts/SansitaSwashed-Bold.ttf);
+}
+
+body {
+    font-family: "RBaloo", "RRaleway";
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        width: 1000px;
+    }
+}
+
+@media (min-width: 1250px) {
+    .container {
+        width: 1200px;
+    }
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.flex1 {
+    flex: 1;
+}
+
+.flex2 {
+    flex: 2;
+}
+
+.btn {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    border-radius: 0.4rem;
+    padding: 1rem 1.8rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: 2px solid var(--secondary);
+    transition: var(--smooth);
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--ternary);
+}
+
+.btn-secondary {
+    background-color: var(--secondary);
+    color: var(--ternary);
+}
+
+.btn-primary:hover {
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    background-color: var(--ternary);
+}
+
+.btn-secondary:hover {
+    border: 2px solid var(--secondary);
+    color: var(--secondary);
+    background-color: var(--ternary);
+}
+
+.section-heading {
+    text-align: center;
+    font-size: 4rem;
+    font-weight: bold;
+    width: max-content;
+    margin: 4rem auto;
+    padding: 0.5rem 2rem;
+}
+
+
+/* Animation */
+
+@keyframes scale {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.05);
+    }
+}

@@ -1,0 +1,962 @@
+/* Main Wrapper */
+
+.main-wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+
+/* Nav background  */
+
+.nav-bg {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background-color: var(--light);
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1rem;
+    z-index: 1;
+    display: mone;
+}
+
+.nav-bg .first {
+    margin: 2rem 1rem;
+}
+
+.nav-bg .first h3 {
+    margin: 1rem 0;
+    font-size: 4rem;
+    font-weight: bolder;
+    font-family: "BSansita";
+    font-style: italic;
+    color: var(--primary);
+    text-shadow: 16px -20px 1px var(--light);
+}
+
+.nav-bg .first div img {
+    width: 3rem;
+    height: 3rem;
+    object-fit: cover;
+    margin: 0 1rem;
+}
+
+.nav-bg .first div span {
+    font-size: 2rem;
+}
+
+.nav-bg .second {
+    margin: 3rem 1rem;
+}
+
+.nav-bg .second ul {
+    list-style: none;
+}
+
+.nav-bg .second ul li {
+    margin: 1rem;
+}
+
+.nav-bg .second ul li a {
+    font-family: "BBRaleway";
+    text-decoration: none;
+    color: var(--secondary);
+    padding: 0.5rem 1rem;
+    line-height: 2.5rem;
+    font-size: 2rem;
+    border-radius: 0.5rem;
+    transition: var(--smooth);
+}
+
+.nav-bg .second ul li a:hover {
+    color: var(--primary-dark);
+    font-weight: bolder;
+}
+
+.nav-bg .third img {
+    width: 4rem;
+    height: 4rem;
+    object-fit: cover;
+    margin-right: 1rem;
+}
+
+.nav-bg .third span {
+    font-size: 1.6rem;
+    font-weight: bolder;
+}
+
+.nav-bg .third {
+    margin-top: auto;
+}
+
+.nav-bg .third div {
+    margin: 1rem 0rem;
+}
+
+.nav-bg .third div div>span:first-of-type {
+    font-family: "BBaloo2";
+    font-size: 2rem;
+}
+
+.nav-trigger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    padding: 2rem;
+    display: none;
+    transition: var(--smooth);
+    animation: scale 2s ease-in-out infinite alternate-reverse;
+}
+
+.nav-trigger img {
+    cursor: pointer;
+    width: 6rem;
+    height: 6rem;
+    transition: var(--smooth);
+    transform: rotate(0);
+}
+
+.nav-trigger img:hover {
+    transform: scale(1.05);
+}
+
+
+/* Site Content wrapper*/
+
+.site-content-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+    transition: var(--smooth);
+}
+
+.scaled {
+    transform: scale(0.94) translateX(85%);
+    border-radius: 1rem;
+    box-shadow: 0 0.4rem 1.4rem 0 var(--secondary);
+}
+
+
+/* Site Content */
+
+.site-content {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+
+/* Top Header */
+
+.top {
+    background-color: var(--secondary);
+    color: var(--ternary);
+    padding: 1rem 0;
+}
+
+.top .container .left a img {
+    width: 2.4rem;
+    height: 2.4rem;
+    margin-right: 1rem;
+    border-radius: 50%;
+    background-color: var(--pure);
+}
+
+.top .container .right div {
+    margin: 0 0.5rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.6rem;
+}
+
+.top .container .right span {
+    margin: 0 0.5rem;
+    font-size: 1.6rem;
+}
+
+.top .container .right div img {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right: 0.5rem;
+    background-color: var(--ternary);
+    border-radius: 50%;
+}
+
+
+/* Navigation */
+
+nav {
+    background-color: var(--light);
+    padding: 4rem 0;
+}
+
+nav .container {
+    margin: 4rem auto;
+    font-size: 1.6rem;
+}
+
+nav .container div .slogan {
+    font-size: 4rem;
+    font-weight: bolder;
+    font-family: "BSansita";
+    font-style: italic;
+    color: var(--primary);
+    text-shadow: 16px -20px 1px var(--light);
+}
+
+nav .container div>div img {
+    margin-right: 2rem;
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+nav .container div>div span:first-of-type {
+    font-family: "BBaloo2";
+}
+
+nav .navigation {
+    list-style-type: none;
+    font-size: 2rem;
+}
+
+nav .navigation ul {
+    background-color: var(--pure);
+    padding: 0.5rem 1.5rem;
+    box-shadow: 1px 1px 2px 0px var(--primary-light);
+    list-style-type: none;
+}
+
+nav .navigation li a {
+    margin: 1rem;
+    color: var(--secondary);
+    padding: 0.5rem 1.5rem;
+    text-decoration: none;
+    transition: var(--smooth);
+}
+
+nav .navigation li a.active {
+    color: var(--ternary);
+    background-color: var(--primary);
+    border-radius: 0.4rem;
+}
+
+nav .navigation li a:hover {
+    color: var(--ternary);
+    background-color: var(--primary);
+    border-radius: 0.4rem;
+}
+
+
+/* Hero Section */
+
+.hero {
+    background-image: linear-gradient( 60deg, var(--primary-dark), var(--secondary), var(--primary-dark)), url(../images/berry.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: luminosity;
+    padding: 2rem 0;
+}
+
+.hero .container .greet {
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 1px var(--light);
+}
+
+.hero .container {
+    margin: 2rem auto;
+    padding: 6rem;
+    color: var(--ternary);
+    position: relative;
+}
+
+.hero .container .greet span {
+    font-size: 2.2rem;
+    font-weight: bolder;
+    font-family: "BSansita";
+    font-style: italic;
+    color: var(--primary);
+}
+
+.hero .container h1 {
+    margin: 1rem 0rem 1.5rem 0rem;
+    font-size: 3rem;
+    font-family: "BRaleway";
+}
+
+.hero .container h1 span {
+    color: var(--primary-dark);
+    text-shadow: 2.5px 0px 0px var(--primary-dark);
+}
+
+.hero .container .intro {
+    font-size: 1.5rem;
+    padding-right: 50%;
+}
+
+.hero .container div {
+    margin: 2rem 0;
+}
+
+.hero .container div .btn {
+    margin-right: 1rem;
+}
+
+.hero .container .hero-image {
+    position: absolute;
+    top: -10rem;
+    right: 22rem;
+    transform-origin: var(--smooth);
+    animation: scale 2s ease-in-out infinite alternate-reverse;
+    width: 40rem;
+    height: 40rem;
+}
+
+.hero .container .hero-image img {
+    width: 125%;
+    height: 125%;
+}
+
+
+/* Sections  */
+
+
+/* Top Fruits Section */
+
+section.product {
+    background-color: var(--light);
+    padding: 4rem 0;
+}
+
+#product>.btn-wrapper {
+    margin-bottom: 4rem;
+}
+
+#product .container {
+    margin: 3rem auto;
+    overflow-x: scroll;
+    scrollbar-width: none;
+}
+
+#product .container::-webkit-scrollbar {
+    display: none;
+}
+
+#product .container .card {
+    width: 20rem;
+    max-width: 22rem;
+    min-width: 20rem;
+    margin: 2rem;
+    min-height: 25rem;
+    background-color: var(--white);
+    border: 2px solid var(--primary-dark);
+    transform: scale(1);
+    box-shadow: 1px 1px 1px var(--secondary);
+    transition: var(--smooth);
+}
+
+#product .container .card:hover {
+    transform: scale(1.05);
+}
+
+#product .container .card .top {
+    background-color: var(--white);
+}
+
+#product .container .card .top img {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#product .container .card .top img:hover {
+    transform: scale(1.05);
+}
+
+#product .container .card hr {
+    width: 100%;
+    font-weight: bold;
+    color: var(--secondary);
+}
+
+#product .container .card .bottom h3 {
+    font-size: 2rem;
+    margin: 0.4rem;
+}
+
+#product .container .card .bottom img {
+    width: 1.1rem;
+    height: 1.1rem;
+    object-fit: contain;
+}
+
+#product .container .card .bottom .price {
+    font-size: 1.1rem;
+}
+
+#product .container .card .bottom .add-to-cart {
+    border: 2px solid var(--primary-dark);
+    margin: 0.5rem;
+    width: 12rem;
+}
+
+#product .container .card .bottom .add-to-cart img {
+    width: 100%;
+    height: 100%;
+    color: var(--secondary);
+    background-color: var(--primary-light);
+}
+
+#product .container .card .bottom .add-to-cart span {
+    padding: 0 1rem;
+    cursor: pointer;
+    margin-right: auto;
+    line-height: 2.5rem;
+    font-size: 1.3rem;
+    border: 2px solid var(--primary-primary);
+}
+
+
+/* About Us  */
+
+section.about {
+    padding: 3rem 0;
+    font-size: 1.4rem;
+    background-color: var(--white);
+}
+
+#about .container div img {
+    width: 40rem;
+    height: 40rem;
+    object-fit: cover;
+    position: relative;
+    transition: var(--smooth);
+}
+
+#about .container div img:hover {
+    transform: scale(1.1);
+}
+
+#about .container .right {
+    padding-right: 15rem;
+}
+
+#about .container .right p:first-of-type {
+    font-size: 2.5rem;
+    font-family: "BBaloo2";
+    line-height: 2.5rem;
+    margin: 3rem 0;
+}
+
+#about .container .right p:nth-of-type(2) {
+    font-size: 1.8rem;
+    margin: 3rem 0;
+}
+
+
+/* Service Section*/
+
+section.service {
+    padding: 3rem 0;
+    font-size: 1.2rem;
+    background-color: var(--light);
+}
+
+.service .container {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.service .container .card {
+    min-width: 25rem;
+    max-width: 30rem;
+    min-height: 30rem;
+    margin: 4rem;
+    padding: 2rem;
+    border: 2px solid var(--primary-dark);
+    position: relative;
+    transition: var(--smooth);
+    transform: scale(1);
+}
+
+.service .container .card:hover {
+    transform: scale(1.05);
+}
+
+.service .container .card:nth-child(2) div {
+    background-color: var(--primary);
+}
+
+.service .container .card:nth-child(2) div img {
+    background-color: var(--white);
+    border-radius: 50%;
+}
+
+.service .container .card:nth-child(2) h3 {
+    color: var(--primary-dark);
+}
+
+.service .container .card:nth-child(2) .btn {
+    background-color: var(--primary);
+    color: var(--ternary);
+    font-weight: bold;
+}
+
+.service .container .card div {
+    position: absolute;
+    top: -35px;
+    left: 40%;
+    border: 2px solid var(--secondary);
+    transform: rotate(45deg);
+    background-color: var(--secondary);
+    border-radius: 1rem;
+}
+
+.service .container .card div img {
+    transform: rotate(-45deg);
+    width: 4rem;
+    height: 4rem;
+    object-fit: contain;
+    background-color: var(--light);
+    border-radius: 50%;
+    margin: 1rem;
+    padding: 0.2rem;
+}
+
+.service .container .card h3 {
+    font-size: 2rem;
+    font-family: "BBaloo2";
+    margin: 1.5rem auto 0 auto;
+}
+
+.service .container .card p {
+    font-size: 1.7rem;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+
+/* Deal */
+
+section.deal {
+    padding: 3rem 0 8rem 0;
+    font-size: 1.8rem;
+    color: var(--light);
+    background-image: linear-gradient( 60deg, var(--primary), var(--secondary), var(--tetra)), url(../images/mix.jpg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+    background-attachment: fixed;
+    background-blend-mode: multiply;
+    font-weight: bolder;
+}
+
+.deal .section-heading {
+    color: var(--light);
+}
+
+.deal .container div {
+    margin: 2rem;
+    background-color: var(--tetra);
+    width: 15rem;
+    height: 15rem;
+}
+
+
+/* Blog */
+
+section.blog {
+    padding: 3rem 0;
+    font-size: 1.6rem;
+    background-color: var(--light);
+}
+
+.blog .container {
+    flex-wrap: wrap;
+}
+
+.blog .container .card {
+    width: 40rem;
+    height: auto;
+    min-width: 20rem;
+    border-radius: 0.5rem;
+    transition: var(--smooth);
+    box-shadow: 1px 1px 2px var(--light), -1px -1px 2px var(--light);
+    margin: 2rem;
+}
+
+.blog .btn-wrapper {
+    margin: 4rem 0;
+}
+
+.blog .container .card:hover {
+    transform: scale(1.05);
+}
+
+.blog .container .card .first img {
+    width: 40rem;
+    min-width: 20rem;
+    height: 30rem;
+    object-fit: cover;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+.blog .container .card .second {
+    margin: 1rem 0rem;
+    padding: 0 2rem;
+}
+
+.blog .container .card .third {
+    margin: 1rem 0rem;
+    padding: 0 2rem;
+}
+
+.blog .container .card .second div {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.blog .container .card .second div span {
+    margin: 0rem 0.4rem;
+}
+
+.blog .container .card .third h3 {
+    font-size: 1.6rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin: 1rem 0rem;
+    font-family: "BBRaleway";
+}
+
+.blog .container .card .third p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+
+/* Subscribe */
+
+section.subscribe {
+    padding: 5rem 0;
+    font-size: 1.8rem;
+    color: var(--white);
+    background: url(../images/melon.jpg);
+    background-size: contain;
+    background-position: center center;
+}
+
+.subscribe .container .left {
+    /* border: 5px solid gold; */
+    text-align: center;
+}
+
+.subscribe .container .left img {
+    width: 80%;
+    height: 50rem;
+    transition: var(--smooth);
+    transform: rotate(0deg);
+}
+
+.subscribe .container .left img:hover {
+    transform: rotate(360deg);
+}
+
+.subscribe .container .right h3 {
+    font-size: 2.8rem;
+    font-family: BBRaleway;
+    margin: 3rem 0;
+}
+
+.subscribe .container .right p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin: 2rem 0;
+}
+
+.subscribe .container .right div {
+    justify-content: flex-start;
+    margin: 3rem 0;
+}
+
+.subscribe .container .right div input {
+    padding: 1rem;
+    outline: none;
+}
+
+
+/* Contact */
+
+section.contact {
+    font-size: 1.6rem;
+    background-color: var(--light);
+}
+
+.contact div .outer .inner {
+    margin: 2rem 0;
+    background-color: var(--light);
+    padding: 2rem;
+}
+
+.contact div .outer .inner img {
+    width: 4rem;
+    height: 4rem;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 2rem;
+}
+
+.contact div .outer .inner>div {
+    margin: 2rem 0;
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+
+/* Footer  */
+
+footer {
+    padding: 3rem 0;
+    font-size: 2rem;
+    color: var(--white);
+    background-color: var(--secondary);
+}
+
+footer .container hr {
+    color: var(--white);
+    width: 100%;
+    font-weight: bolder;
+    margin: -2rem 0 2.5rem 0;
+}
+
+footer .container h3 {
+    font-size: 2.6rem;
+}
+
+footer .container .btn {
+    margin: 2rem 0;
+}
+
+footer .container .links div a {
+    color: var(--white);
+    text-decoration: none;
+    margin: 0.4rem 0;
+}
+
+footer .container .links div a:hover {
+    text-decoration: underline;
+}
+
+footer .container .follow div img {
+    width: 3rem;
+    height: 3rem;
+    object-fit: cover;
+    margin: 1rem 1.5rem;
+    border-radius: 50%;
+    background-color: var(--white);
+}
+
+footer .container .insta div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer .container .insta img {
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
+    margin: 1rem 0.5rem;
+}
+
+footer .container .box {
+    flex: 1;
+    margin-right: 4rem;
+    text-align: center;
+}
+
+
+/* Responsive Blocks */
+
+@media (max-width: 1248px) and (min-width: 1024px) {
+    .hero .container .hero-image {
+        right: 14rem;
+        width: 36rem;
+        height: 36rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    header.top,
+    nav {
+        display: none;
+    }
+    .hero .container {
+        padding-right: 20rem;
+    }
+    .hero .container .intro {
+        padding-right: 30%;
+    }
+    .hero .container .hero-image {
+        right: 0rem;
+    }
+    .nav-trigger {
+        display: block;
+    }
+    #about .container div img {
+        width: 36rem;
+        height: 36rem;
+    }
+    #about .container .right {
+        padding-right: 0rem;
+    }
+    .service .container .card {
+        padding: 2rem;
+        margin: 2rem;
+    }
+    .blog .container .card {
+        width: 35rem;
+        height: auto;
+        margin: 2rem;
+    }
+    .blog .container .card .first img {
+        width: 35rem;
+        height: 25rem;
+    }
+    .blog .btn-wrapper {
+        margin: 4rem 0;
+    }
+    .blog .container .card .second div span {
+        font-size: 1rem;
+    }
+    .contact div .outer .inner {
+        margin: 0;
+    }
+    .contact .section-heading {
+        margin: 2rem 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-heading {
+        font-size: 3rem;
+    }
+    .hero .container {
+        padding-right: 10rem;
+    }
+    .hero .container .hero-image {
+        width: 32rem;
+        top: -5rem;
+        height: 32rem;
+        right: 0rem;
+    }
+    #about .container .right {
+        padding-right: 4rem;
+    }
+    .service .container .card {
+        margin: 4rem;
+    }
+    .subscribe .container .left img {
+        width: 100%;
+        height: 40rem;
+    }
+    .subscribe .container .right {
+        padding: 3rem;
+    }
+    .contact {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .contact .form-wrapper {
+        flex: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .contact .map {
+        min-height: 50rem;
+    }
+    #product .container {
+        margin: 4rem auto;
+        margin-left: 4rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .nav-trigger {
+        padding: 1rem 0.5rem;
+    }
+    .section-heading {
+        font-size: 2rem;
+    }
+    .hero .container {
+        margin: 2rem auto;
+        padding: 2rem;
+    }
+    .hero .container .hero-image {
+        width: 28rem;
+        height: 28rem;
+        top: 0rem;
+        right: -6rem;
+    }
+    #about .container .right {
+        padding: 4rem;
+    }
+    #about .container .left img {
+        width: 28rem;
+        height: 28rem;
+    }
+    .subscribe .container .left img {
+        width: 100%;
+        height: 40rem;
+    }
+    .subscribe .container {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .subscribe .container .left img {
+        width: 30rem;
+        height: 30rem;
+    }
+    .subscribe .container .right {
+        padding: -1rem 6rem;
+    }
+    .subscribe .container .right input {
+        width: 18rem;
+    }
+    .blog .container .card {
+        width: 28rem;
+        height: auto;
+        margin: 3rem;
+    }
+    .blog .container .card .first img {
+        width: 28rem;
+        height: 20rem;
+    }
+    .blog .container .card .second div {
+        flex-direction: column;
+    }
+    .blog .container .card .second div span {
+        font-size: 1rem;
+    }
+    #product .container {
+        margin-left: 3rem;
+    }
+}
