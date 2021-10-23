@@ -177,16 +177,31 @@ body {
     width: max-content;
     margin: 4rem auto;
     padding: 0.5rem 2rem;
+    position: relative;
+}
+
+.section-heading::after {
+    transition: var(--smooth);
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 80%;
+    height: 0.4rem;
+    background: linear-gradient(60deg, var(--secondary), var(--primary-dark));
+    color: var(--secondary);
+}
+
+.section-heading:hover:after {
+    width: 100%;
 }
 
 
 /* Animation */
 
 @keyframes scale {
-    from {
-        transform: scale(1);
-    }
-    to {
-        transform: scale(1.05);
+    50% {
+        transform-origin: center;
+        transform: translateX(4rem) rotate(10deg) scale(0.5);
     }
 }

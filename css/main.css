@@ -1,3 +1,5 @@
+@import "utility.css";
+
 /* Main Wrapper */
 
 .main-wrapper {
@@ -107,7 +109,6 @@
     padding: 2rem;
     display: none;
     transition: var(--smooth);
-    animation: scale 2s ease-in-out infinite alternate-reverse;
 }
 
 .nav-trigger img {
@@ -310,9 +311,10 @@ nav .navigation li a:hover {
 .hero .container .hero-image {
     position: absolute;
     top: -10rem;
-    right: 22rem;
-    transform-origin: var(--smooth);
-    animation: scale 2s ease-in-out infinite alternate-reverse;
+    right: 25rem;
+    transform: rotate(-10deg) scale(0.95);
+    transition: var(--smooth);
+    animation: scale 4s ease-in-out infinite forwards;
     width: 40rem;
     height: 40rem;
 }
@@ -457,7 +459,8 @@ section.about {
 #about .container .right p:first-of-type {
     font-size: 2.5rem;
     font-family: "BBaloo2";
-    line-height: 2.5rem;
+    line-height: 3.4rem;
+    letter-spacing: 0.1rem;
     margin: 3rem 0;
 }
 
@@ -575,6 +578,7 @@ section.deal {
     background-color: var(--tetra);
     width: 15rem;
     height: 15rem;
+    color: var(--secondary);
 }
 
 
@@ -806,17 +810,17 @@ footer .follow div img {
 }
 
 footer .insta div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    grid-row-gap: 2rem;
+    padding: 1rem 2rem;
 }
 
 footer .insta img {
-    width: 5rem;
-    height: 5rem;
+    width: 8rem;
+    height: 8rem;
     object-fit: cover;
-    margin: 1rem 0.5rem;
 }
 
 footer .box {
@@ -936,6 +940,14 @@ footer .box {
     #product .container {
         margin: 4rem auto;
         margin-left: 4rem;
+    }
+    footer .insta div {
+        padding: 1rem 4rem;
+    }
+    footer .insta img {
+        width: 8rem;
+        height: 8rem;
+        object-fit: cover;
     }
 }
 
